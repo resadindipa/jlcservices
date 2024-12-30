@@ -37,7 +37,7 @@ strong {
     display: flex;
     align-items: center;
     transition-duration: 0.5s;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 2;
@@ -121,9 +121,13 @@ strong {
 }
 
 .nav-bar-white .nav-bar-left p {
-    color: white;
+    color: white!important;
 }
 
+.action-btn a{
+    text-decoration: none;
+    color: white!important;
+}
 #nav-bar-contact-us:hover {
     text-decoration: none;
 }
