@@ -1,58 +1,58 @@
-var owl2 = $('#owl-carousel-2');
-var owl = $('#owl-carousel-1');
+// var owl2 = $('#owl-carousel-2');
+// var owl = $('#owl-carousel-1');
 
-let hasAllShown = false;
+// let hasAllShown = false;
 
-let autoWidthValue = true;
-if (parseInt($(window).width()) < 768) {
-    autoWidthValue = false;
-}
+// let autoWidthValue = true;
+// if (parseInt($(window).width()) < 768) {
+//     autoWidthValue = false;
+// }
 // console.log(parseInt($(window).width()).toString() + "--" + autoWidthValue);
 
-owl2.owlCarousel({
-    margin: 18,
-    loop: false,
-    autoWidth: autoWidthValue,
-    responsiveClass: true,
-    responsive: {
-        0: {
-            items: 1,
-            nav: false
-        },
+// owl2.owlCarousel({
+//     margin: 18,
+//     loop: false,
+//     autoWidth: autoWidthValue,
+//     responsiveClass: true,
+//     responsive: {
+//         0: {
+//             items: 1,
+//             nav: false
+//         },
 
-        650: {
-            items: 2,
-            nav: false
-        },
-        1000: {
-            items: 4,
-            nav: true,
-            loop: false
-        }
-    }
-})
+//         650: {
+//             items: 2,
+//             nav: false
+//         },
+//         1000: {
+//             items: 4,
+//             nav: true,
+//             loop: false
+//         }
+//     }
+// })
 
-owl.owlCarousel({
-    margin: 18,
-    loop: false,
-    autoWidth: autoWidthValue,
-    responsiveClass: true,
-    responsive: {
-        0: {
-            items: 1,
-            nav: false
-        },
-        650: {
-            items: 2,
-            nav: false
-        },
-        1000: {
-            items: 4,
-            nav: false,
-            loop: false
-        }
-    }
-})
+// owl.owlCarousel({
+//     margin: 18,
+//     loop: false,
+//     autoWidth: autoWidthValue,
+//     responsiveClass: true,
+//     responsive: {
+//         0: {
+//             items: 1,
+//             nav: false
+//         },
+//         650: {
+//             items: 2,
+//             nav: false
+//         },
+//         1000: {
+//             items: 4,
+//             nav: false,
+//             loop: false
+//         }
+//     }
+// })
 
 // $('#nextbtn').click(function() {
 //     console.log("edsdsds")
@@ -82,6 +82,7 @@ owl.owlCarousel({
 //second commit
 
 $(document).ready(function() {
+    let screenWidth = screen.width;
 
     // Scroll to the specific sections when clicked on a button or link(text)
     $(".action-btn").click(function() {
@@ -93,6 +94,42 @@ $(document).ready(function() {
         }, 1200);
     });
 
+
+    // Attach click event to all parent-div elements
+    $('.parent-div').click(function() {
+        // Get the data-target attribute value (child div ID)
+        var targetId = $(this).attr('data-target');
+        var clicked = $(this).attr('data-clicked').toString();
+
+        if (clicked == "false") {
+            $(this).attr('class', "faq-item parent-div faq-item-expanded")
+            $(this).attr('data-clicked', "true");
+            // $(this).find('img').css('transform', "rotateX(180deg)");
+            $(this).find('img').attr('src', 'contents/images/arrowupwhite.svg')
+            $('#' + targetId).show();
+            $(this).find('.faq-item-arrow').css('background-color', '#6464642a')
+            $(this).find('.faq-item-content').css('background-color', '#37322E')
+            $(this).find('.faq-item-quest').css('color', 'white')
+            $(this).find('.faq-item-content').css('border-bottom-left-radius', '0')
+            $(this).find('.faq-item-content').css('border-bottom-right-radius', '0')
+        } else {
+            $(this).attr('class', "faq-item parent-div")
+            $('#' + targetId).hide();
+            $(this).find('img').attr('src', 'contents/images/arrow-down.png')
+            $(this).find('img').css('transform', "rotateX(0deg)");
+            $(this).attr('data-clicked', "false");
+            $(this).find('.faq-item-arrow').css('background-color', 'transparent')
+            $(this).find('.faq-item-content').css('background-color', '#F4F4F4')
+            $(this).find('.faq-item-quest').css('color', '#404452')
+
+            let borderRadius = '5px'
+            if (screenWidth <= 768) {
+                borderRadius = '0px'
+            }
+            $(this).find('.faq-item-content').css('border-bottom-left-radius', borderRadius)
+            $(this).find('.faq-item-content').css('border-bottom-right-radius', borderRadius)
+        }
+    });
 
 
     // check_for_nav();
@@ -117,10 +154,18 @@ $(document).ready(function() {
 
 
     $('#nav-bar-toggle').click(function() {
-        $('.nav-bar-toggled').css('top', '0%');
+        $('#indipa').css('display', "block");
+        $('.nav-bar-toggled').css('top', '20%');
     });
 
     $('#nav-bar-toggle-close').click(function() {
+        $('#indipa').css('display', "none");
+        $('.nav-bar-toggled').css('top', '100%');
+    });
+
+
+    $('#indipa').click(function() {
+        $('#indipa').css('display', "none");
         $('.nav-bar-toggled').css('top', '100%');
     });
 

@@ -106,41 +106,7 @@ $(document).ready(function() {
         }, 2000);
     });
 
-    // Attach click event to all parent-div elements
-    $('.parent-div').click(function() {
-        // Get the data-target attribute value (child div ID)
-        var targetId = $(this).attr('data-target');
-        var clicked = $(this).attr('data-clicked').toString();
 
-        if (clicked == "false") {
-            $(this).attr('class', "faq-item parent-div faq-item-expanded")
-            $(this).attr('data-clicked', "true");
-            // $(this).find('img').css('transform', "rotateX(180deg)");
-            $(this).find('img').attr('src', 'projects/sydneybuilds.com/contents/images/arrowupwhite.svg')
-            $('#' + targetId).show();
-            $(this).find('.faq-item-arrow').css('background-color', '#6464642a')
-            $(this).find('.faq-item-content').css('background-color', '#37322E')
-            $(this).find('.faq-item-quest').css('color', 'white')
-            $(this).find('.faq-item-content').css('border-bottom-left-radius', '0')
-            $(this).find('.faq-item-content').css('border-bottom-right-radius', '0')
-        } else {
-            $(this).attr('class', "faq-item parent-div")
-            $('#' + targetId).hide();
-            $(this).find('img').attr('src', 'projects/sydneybuilds.com/contents/images/arrow-down.png')
-            $(this).find('img').css('transform', "rotateX(0deg)");
-            $(this).attr('data-clicked', "false");
-            $(this).find('.faq-item-arrow').css('background-color', 'transparent')
-            $(this).find('.faq-item-content').css('background-color', '#F4F4F4')
-            $(this).find('.faq-item-quest').css('color', '#404452')
-
-            let borderRadius = '5px'
-            if (screenWidth <= 768) {
-                borderRadius = '0px'
-            }
-            $(this).find('.faq-item-content').css('border-bottom-left-radius', borderRadius)
-            $(this).find('.faq-item-content').css('border-bottom-right-radius', borderRadius)
-        }
-    });
 
 
     // check_for_nav();
