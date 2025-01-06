@@ -731,15 +731,16 @@ div#indipa {
 }
 
 .faq-item img {
-    width: 15px;
-    transform-style: preserve-3d;
-    transition: transform .3s ease-out;
+    width: 100%;
+    height: auto;
+    /* transform-style: preserve-3d;
+    transition: transform .3s ease-out; */
     /* position: relative; */
     /* top: 8px; */
-    -webkit-user-select: none;
+    /* -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none; */
 }
 
 .faq-item-expanded {
