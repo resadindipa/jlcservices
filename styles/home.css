@@ -737,10 +737,10 @@ div#indipa {
     transition: transform .3s ease-out; */
     /* position: relative; */
     /* top: 8px; */
-    /* -webkit-user-select: none;
+    -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; */
+    user-select: none;
 }
 
 .faq-item-expanded {
