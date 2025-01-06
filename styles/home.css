@@ -721,7 +721,7 @@ div#indipa {
     width: 15px;
     height: 15px;
     display: inline-block;
-    border-radius: 100%;
+    align-items: start;
     text-align: center;
 }
 
@@ -733,7 +733,6 @@ div#indipa {
 .faq-item img {
     width: 15px;
     transform-style: preserve-3d;
-    height: fit-content;
     transition: transform .3s ease-out;
     /* position: relative; */
     /* top: 8px; */
