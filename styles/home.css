@@ -718,8 +718,8 @@ div#indipa {
 }
 
 .faq-item-arrow {
-    width: 40px;
-    height: 40px;
+    /* width: 40px;
+    height: 40px; */
     display: inline-block;
     border-radius: 100%;
     text-align: center;
@@ -735,8 +735,8 @@ div#indipa {
     transform-style: preserve-3d;
     height: fit-content;
     transition: transform .3s ease-out;
-    position: relative;
-    top: 8px;
+    /* position: relative; */
+    /* top: 8px; */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
