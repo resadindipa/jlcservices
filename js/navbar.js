@@ -35,6 +35,38 @@ $(document).ready(function() {
     });
 
 
+    function check_for_nav() {
+        var y_scroll_pos = window.pageYOffset;
+        // console.log(y_scroll_pos)
+        var scroll_pos_test = 250; // set to whatever you want it to be
+
+        if (y_scroll_pos > scroll_pos_test) {
+            //do stuff
+            $('.nav-bar-1').attr('class', 'nav-bar nav-bar-1 nav-bar-white')
+            $('#nav-bar-toggle').attr('src', 'contents/images/navbaricon.svg')
+        } else {
+            $('.nav-bar-1').attr('class', 'nav-bar nav-bar-1')
+            $('#nav-bar-toggle').attr('src', 'contents/images/navbaricon.svg')
+        }
+    }
+
+
+    $('#nav-bar-toggle').click(function() {
+        $('#indipa').css('display', "block");
+        $('.nav-bar-toggled').css('top', '20%');
+    });
+
+    $('#nav-bar-toggle-close').click(function() {
+        $('#indipa').css('display', "none");
+        $('.nav-bar-toggled').css('top', '100%');
+    });
+
+
+    $('#indipa').click(function() {
+        $('#indipa').css('display', "none");
+        $('.nav-bar-toggled').css('top', '100%');
+    });
+
 
     // $('.navbar-navigate-link').click(function(e) {
     //     e.preventDefault(); // Prevent default anchor behavior
