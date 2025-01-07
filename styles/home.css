@@ -18,7 +18,7 @@ html {
 input[type='text'],
 input[type='email'],
 textarea {
-  font-size: 16px!important;
+    font-size: 16px!important;
 }
 
 p,
@@ -235,6 +235,10 @@ div#indipa {
 .header-section {
     padding-top: var(--navbar-height)!important;
     height: fit-content;
+}
+
+#header-section-item-desc {
+    margin-bottom: 50px;
 }
 
 #header-section-item-ext {
@@ -621,13 +625,20 @@ div#indipa {
 }
 
 .projects-item-desc-text h4 {
-    font-size: 18px;
+    font-size: 17px;
     margin: 0;
+    font-weight: 500;
+}
+
+.projects-item-desc-text h4 a {
+    color: #1F1D1D;
+    text-decoration: none;
 }
 
 .main-section .projects-item-desc-text p {
-    font-size: 15px;
+    font-size: 14px;
     margin: 0;
+    color: #6c6c6c;
 }
 
 .projects-item-desc-btn {
@@ -967,7 +978,7 @@ div#indipa {
 /* footer's first row */
 
 .footer-logo {
-    width: 100px;
+    width: 200px;
 }
 
 .ventoras-tagline {

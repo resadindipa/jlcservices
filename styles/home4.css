@@ -1,71 +1,9 @@
 /* header section */
 
 #header-section-item {
-    padding: 30px 0;
+    padding-bottom: 0 !important;
 }
 
-
-/* description with side image - 1 */
-
-#desc-with-side-img-1 {
-    margin: 30px 0;
-}
-
-
-/* why choose us - 4 sections */
-
-#why-choose-us-section-item-ext {
-    margin: 30px 0;
-}
-
-
-/* description with side image - 2  */
-
-#desc-with-side-img-2 {
-    margin: 30px 0;
-}
-
-
-/* Services we provide section */
-
-#services-section-item {
-    margin: 30px 0;
-}
-
-
-/* Full width container */
-
-#full-width-container {
-    margin: 30px 0;
-}
-
-
-/* Our projects */
-
-#projects-section-item {
-    margin: 30px 0;
-}
-
-
-/* Reviews */
-
-#reviews-section-item {
-    margin: 30px 0;
-}
-
-
-/* Frequently Asked Question */
-
-#faq-section-item-ext {
-    margin: 30px 0;
-}
-
-
-/* Contact us */
-
-#contact-us-section-item {
-    margin: 30px 0;
-}
 
 #desc-with-side-img-1,
 #desc-with-side-img-2,

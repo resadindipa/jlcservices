@@ -1,3 +1,18 @@
+@media only screen and (max-width: 1100px) and (min-width:768px) {
+    .projects-item-desc-btn {
+        display: none;
+    }
+    .projects-item-desc-text {
+        width: auto;
+    }
+    .projects-item-desc {
+        padding: 1.3vw;
+    }
+    .projects-item-img {
+        height: 17vw;
+    }
+}
+
 @media only screen and (max-width: 1024px) {}
 
 @media only screen and (min-width: 992px) {
@@ -26,6 +41,13 @@
 @media only screen and (max-width: 768px) {
     .main-section {
         padding: 0 20px;
+    }
+    /* projects we've done */
+    .projects-item-desc {
+        padding: 2.1vw;
+    }
+    .projects-item-desc-text h4 {
+        margin-bottom: 1vw;
     }
     /* contact forum */
     .contact-text-form {
@@ -146,16 +168,16 @@
         height: 50vw;
     }
     .projects-item-desc-text h4 {
-        font-size: 3.5vw;
+        font-size: 3.8vw;
         margin: 0;
         font-weight: 600;
-        margin-bottom: 2vw;
+        margin-bottom: 1vw;
     }
     .projects-item-desc {
         padding: 3.5vw;
     }
     .main-section .projects-item-desc-text p {
-        font-size: 3.2vw;
+        font-size: 3.3vw;
     }
     /* reviews */
     .review-profile-pic {
@@ -286,6 +308,10 @@
     .section-desc {
         font-size: 15px;
     } */
+    /* projects we've done */
+    .projects-item-desc-btn {
+        display: none;
+    }
     /* before vs after image comparison */
     .section-tab-side-comp-img {
         margin-top: 20px;
