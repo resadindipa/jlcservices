@@ -80,20 +80,42 @@
 
 // }, 1500);
 //second commit
-
+const scrollTime = 1200;
 $(document).ready(function() {
     let screenWidth = screen.width;
 
-    // Scroll to the specific sections when clicked on a button or link(text)
-    $(".action-btn").click(function() {
-        $('#nav-bar-toggle-close').click();
-
-        var targetId = $(this).attr('data-scroll');
+    // Retrieve and log the message passed in the URL, if any
+    const urlParams = new URLSearchParams(window.location.search);
+    const message = urlParams.get('scroll');
+    if (message) {
         $('html, body').animate({
-            scrollTop: $("#" + targetId).offset().top
-        }, 1200);
-    });
+            scrollTop: $("#" + message).offset().top
+        }, scrollTime);
+    }
 
+
+    function removeQueryParameter(param) {
+        const url = new URL(window.location.href);
+
+        if (url.searchParams.has(param)) {
+            // Remove the specific parameter
+            url.searchParams.delete(param);
+
+            // Update the URL without reloading the page
+            window.history.replaceState({}, document.title, url.toString());
+        }
+    }
+
+    // Detect if the page is refreshed
+    if (performance.getEntriesByType('navigation')[0].type === 'reload') {
+        // Remove the `scroll` parameter on refresh
+        removeQueryParameter('scroll');
+
+        //Scroll back to the top
+        // $('html, body').animate({
+        //     scrollTop: 0
+        // }, 0);
+    }
 
     // Attach click event to all parent-div elements
     $('.parent-div').click(function() {
