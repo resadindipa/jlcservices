@@ -466,13 +466,13 @@ div#indipa {
 
 .num-item-cell .num-item-cell-title {
     color: #404452;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .num-item-cell .num-item-cell-desc {
     width: 100%;
-    font-size: 17px;
+    font-size: 15.5px;
 }
 
 .num-item-cell-top-sec {
@@ -541,7 +541,7 @@ div#indipa {
 .full-width-container-title {
     color: white;
     margin: 0;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 .full-width-container-btn {
@@ -638,7 +638,7 @@ div#indipa {
 .main-section .projects-item-desc-text p {
     font-size: 14px;
     margin: 0;
-    color: #6c6c6c;
+    margin-top: 4px;
 }
 
 .projects-item-desc-btn {
@@ -666,17 +666,18 @@ div#indipa {
 .review-profile-name h4 {
     font-weight: 500;
     /* font */
-    font-size: 18px;
+    font-size: 17px;
     color: #404452;
     margin: 0;
 }
 
 .num-item-cell-div .reviews-desc {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 25px;
 }
 
 .review-profile-name p {
-    font-size: 17px!important;
+    font-size: 16px!important;
     margin: 0;
     color: #40445298;
 }
